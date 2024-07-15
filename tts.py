@@ -81,22 +81,6 @@ def text_to_speech(text:str,speed:str,model_name:str,hash_of_text:str):
     write_wav(str(output_path), SAMPLE_RATE, audio)
     print(output_path)
     
-    import pygame
-
-    def play_wav(file_path):
-        pygame.init()
-        pygame.mixer.init()
-        try:
-            pygame.mixer.music.load(file_path)
-            print(f"Playing {file_path}...")
-            pygame.mixer.music.play()
-            while pygame.mixer.music.get_busy():
-                pygame.time.Clock().tick(10)
-        except pygame.error:
-            print("Error playing file.")
-
-   
-    play_wav(output_path)
     return output_path
 
 
