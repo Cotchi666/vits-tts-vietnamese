@@ -79,6 +79,8 @@ def text_to_speech(text:str,speed:str,model_name:str,hash_of_text:str):
     # )
     output_path = output_dir + f"/{hash_of_text}.wav"
     write_wav(str(output_path), SAMPLE_RATE, audio)
+    print(output_path)
+    
     return output_path
 
 
